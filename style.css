@@ -1,4 +1,4 @@
-/* RESET */
+/* Reset this removes any default styles that happen automatically */
 * {
   margin: 0;
   padding: 0;
@@ -6,18 +6,19 @@
   font-family: Arial, sans-serif;
 }
 
-/* BODY */
+/* Body */
 body {
   background-color: #0a0a0a;
   color: #ffffff;
 }
 
-/* NAVBAR */
+/* NavBar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #000;
 }
 
 .navList {
@@ -29,39 +30,140 @@ body {
   margin-left: 20px;
 }
 
+/* Logo Link */
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logo-link:visited {
+  color: inherit;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+/* Buttons */
 .btn {
+  display: inline-block;
   text-decoration: none;
   color: white;
+  background-color: #d96a32;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 5px;
 }
 
-/* HERO */
+.btn:hover {
+  background-color: #b95425;
+}
+
+/* Hero */
 .hero {
+  position: relative;
+  height: 620px;
+  overflow: hidden;
+  padding: 0;
   text-align: center;
-  padding: 100px 20px;
 }
 
-.hero-buttons {
-  margin-top: 20px;
+.hero-letip {
+  color: #ffffff;
 }
 
-.hero-buttons .btn {
-  margin: 0 10px;
+.hero-roundtable {
+  color: #d96a32;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
-/* IDENTITY STRIP */
+/* background image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ferry */
+.hero-ferry {
+  position: absolute;
+  bottom: 65px;
+  right: 12%;
+  width: 360px;
+  opacity: 0.95;
+  z-index: 2;
+}
+
+/* text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  z-index: 3;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.hero-text h2,
+.hero-subtitle,
+.hero-tagline {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* ID Strip */
 .identity-strip {
   text-align: center;
   padding: 20px;
   background-color: #111;
 }
 
-/* SECTIONS */
-section {
+/* Sections */
+section:not(.hero) {
   padding: 60px 20px;
   text-align: center;
 }
 
-/* LOGO GRID (placeholder for now) */
+/* LOGO GRID */
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -106,4 +208,23 @@ section {
 
 .footer-tools .btn {
   margin: 0 10px;
+  color: white;
+}
+
+.footer-tools .btn:hover {
+  color: white;
+}
+
+.footer-bottom a {
+  color: #d96a32;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:visited {
+  color: #d96a32;
+}
+
+.footer-bottom a:hover {
+  color: #ff7f45;
 }

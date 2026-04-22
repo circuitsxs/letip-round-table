@@ -240,10 +240,19 @@ section:not(.hero) {
 }
 
 .logo-item {
-  background-color: rgba(34, 34, 34, 0.9);
-  padding: 20px;
+  background-color: rgba(20, 20, 20, 0.95);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
 }
 
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 /* FEATURE CARDS */
 .feature-cards {
   display: flex;

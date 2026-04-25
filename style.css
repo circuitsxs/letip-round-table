@@ -300,3 +300,108 @@ section:not(.hero) {
 .footer-bottom a:hover {
   color: #ff7f45;
 }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navItem {
+    margin-left: 0;
+  }
+
+  .navItem .btn {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .nav-logo {
+    height: 50px;
+  }
+
+  /* HERO TEXT */
+  .hero-text {
+    width: 90%;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  /* LOGO GRID */
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-item {
+    height: 110px;
+  }
+
+  /* FEATURE CARDS */
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  /* FOOTER BUTTONS */
+  .footer-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-tools .btn {
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER LINKS */
+  .footer-bottom p:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1.8;
+  }
+}

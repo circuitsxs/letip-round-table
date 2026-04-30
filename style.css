@@ -597,3 +597,51 @@ section:not(.hero) {
   margin: 12px 0;
   object-fit: contain;
 }
+
+.contact-page {
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.contact-card {
+  max-width: 420px;
+  width: 100%;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.contact-logo {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.contact-card h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.contact-category {
+  color: #d96a32;
+  margin-bottom: 24px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-note {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #bbb;
+}

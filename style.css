@@ -583,6 +583,10 @@ section:not(.hero) {
   gap: 12px;
 }
 
+.contact-actions .btn {
+  width: 100%;
+}
+
 .contact-note {
   margin-top: 24px;
   font-size: 0.9rem;

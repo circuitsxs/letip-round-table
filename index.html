@@ -6,6 +6,7 @@
   <title>LeTip Round Table | Staten Island Chapter</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -25,20 +26,18 @@
   </nav>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <!-- background image -->
-      <img src="images/background/header-bg.png" class="hero-bg" alt="Staten Island skyline">
 
-      <!-- ferry -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <img src="images/background/header-bg.png" class="hero-bg" alt="Staten Island skyline">
       <img src="images/background/ferry.png" class="hero-ferry" alt="Staten Island Ferry">
 
-      <!-- text -->
       <div class="hero-text">
         <h2>
           <span class="hero-letip">LeTip</span>
           <span class="hero-roundtable">Round Table</span>
         </h2>
+
         <p class="hero-subtitle">Staten Island Chapter</p>
         <p class="hero-tagline">Where local businesses connect through trusted referrals.</p>
 
@@ -46,20 +45,21 @@
           <a href="https://facebook.com/groups/222920333879996/" class="btn">
             Join Our Facebook Group
           </a>
-          
         </div>
       </div>
     </section>
 
-    <!-- Shared lower background area -->
+    <!-- Shared Water Background Area -->
     <div class="main-water-wrap">
       <img src="images/background/bg-section1.png" class="main-water-bg" alt="Water background">
 
-      <section class="identity-strip">
+      <!-- Identity Strip -->
+      <section id="identity" class="identity-strip">
         <img src="images/background/divider.png" class="divider-img" alt="Chapter statement">
       </section>
 
-      <section id="directory" class="brag-board-preview">
+      <!-- Members Preview Section -->
+      <section id="directory" class="brag-board-preview section-divider">
         <h2>Chapter Members</h2>
         <p>Explore trusted professionals in the Staten Island chapter.</p>
 
@@ -70,51 +70,155 @@
           <div class="logo-item"></div>
           <div class="logo-item"></div>
           <div class="logo-item"></div>
-       </div>
+        </div>
 
-        <p><a href="directory.html" class="btn">View Full Directory</a></p>
+        <p>
+          <a href="directory.html" class="btn">View Full Directory</a>
+        </p>
       </section>
 
-      <section id="about">
-  <h2>About the Chapter</h2>
+      <!-- About Section -->
+      <section id="about" class="section-divider">
+        <h2>About the Chapter</h2>
 
-  <p><strong>On Staten Island, reputation matters and who you’re connected to says everything.</strong></p>
+        <p>
+          <strong>On Staten Island, reputation matters and who you’re connected to says everything.</strong>
+        </p>
 
-  <p>
-   <span class="hero-roundtable">Round Table</span> is made up of established Staten Island businesses.<br>
-<span class="about-emphasis">Names people know, and names that have something to protect.</span>
-    
-  </p>
+        <p>
+          <span class="hero-roundtable">Round Table</span> is made up of established Staten Island businesses.<br>
+          <span class="about-emphasis">Names people know, and names that have something to protect.</span>
+        </p>
 
-  <p>
-    Through trusted referrals and long-term relationships, members support each other and keep business within a network people recognize and rely on.
-  </p>
-</section>
-     <section class="join-section">
-  
-      <h2>Explore LeTip</h2>
+        <p>
+          Through trusted referrals and long-term relationships, members support each other and keep business within a network people recognize and rely on.
+        </p>
+      </section>
 
-      <p>
-        Interested in learning more or finding a chapter near you?
-      </p>
+      <!-- Explore LeTip Section -->
+      <section id="explore-letip" class="join-section section-divider">
+        <h2>Explore LeTip</h2>
 
-     <p>
-      <a href="https://letip.com/chapters-search-find-chapter/" class="btn" >
-        Find a Local Chapter
-      </a>
-     </p>
+        <p>Interested in learning more or finding a chapter near you?</p>
+
+        <p>
+          <a href="https://letip.com/chapters-search-find-chapter/" class="btn">
+            Find a Local Chapter
+          </a>
+        </p>
+      </section>
+
+      <!-- Business Resources Section -->
+      <section id="resources" class="resources-section section-divider">
+        <h2>Business Resources</h2>
+        <p>Start with the network. Use these tools and member services to build, promote, and support your business.</p>
+
+        <div class="resource-tabs">
+          <button class="resource-tab active" data-resource="brand-presence">Brand & Presence</button>
+          <button class="resource-tab" data-resource="tech-setup">Tech & Communication</button>
+          <button class="resource-tab" data-resource="money-protection">Money & Protection</button>
+          <button class="resource-tab" data-resource="space-operations">Space & Operations</button>
+        </div>
+
+        <div class="resource-panel-box">
+
+          <div id="brand-presence" class="resource-panel active">
+            <h3>Brand & Presence</h3>
+            <p>Get your business visible, searchable, and easier to recognize.</p>
+
+            <div class="resource-link-grid">
+              <div>
+                <h4>Print & Identity</h4>
+                <a href="https://2twinsprinting.com/services/digital-printing/">2 Twins Printing</a>
+                <a href="https://www.threesonsprinting.com/">Three Sons Printing</a>
+                <a href="https://printorius.com/">Printorius</a>
+              </div>
+
+              <div>
+                <h4>Online Setup</h4>
+                <a href="https://www.google.com/business/">Google Business Profile</a>
+                <a href="https://www.linkedin.com/signup">Create a LinkedIn Account</a>
+                <a href="https://www.godaddy.com/domains">Buy a Domain Name</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="tech-setup" class="resource-panel">
+            <h3>Tech & Communication</h3>
+            <p>Set up the systems people use to contact, book, email, and work with your business.</p>
+
+            <div class="resource-link-grid">
+              <div>
+                <h4>Communication</h4>
+                <a href="https://qualitechcomputers.com/ip-phones/">VoIP Phones</a>
+                <a href="https://workspace.google.com/">Google Workspace Email</a>
+                <a href="https://www.microsoft.com/en-us/microsoft-365/business">Microsoft 365 Business</a>
+              </div>
+
+              <div>
+                <h4>Support</h4>
+                <a href="https://www.qualitechcomputers.com">Qualitech Computers</a>
+                <a href="https://www.reliabledatausa.com">Reliable Data USA / POS</a>
+                <a href="directory.html">Find a Chapter Member</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="money-protection" class="resource-panel">
+            <h3>Money & Protection</h3>
+            <p>Use the network first for banking, planning, and protection.</p>
+
+            <div class="resource-link-grid">
+              <div>
+                <h4>Finance</h4>
+                <a href="https://www.enorthfield.com">Northfield Bank</a>
+                <a href="https://fjcfinancial.com/">FJC Financial Group</a>
+                <a href="https://www.edwardjones.com/cinzia-laurenza">Edward Jones</a>
+              </div>
+
+              <div>
+                <h4>Protection</h4>
+                <a href="https://www.worldinsurance.com">World Insurance</a>
+                <a href="directory.html">View Member Directory</a>
+                <a href="#directory">Back to Chapter Members</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="space-operations" class="resource-panel">
+            <h3>Space & Operations</h3>
+            <p>Tools and member services for setting up a workspace or running day-to-day operations.</p>
+
+            <div class="resource-link-grid">
+              <div>
+                <h4>Physical Setup</h4>
+                <a href="https://newyork.craigslist.org/search/stn/off#search=2~gallery~0">Browse Staten Island Office Listings</a>
+                <a href="https://db-si.com">Design Build SI</a>
+                <a href="https://network.procore.com/p/manhattan-electric-supply-staten-island">Manhattan Electrical</a>
+              </div>
+
+              <div>
+                <h4>Quick Tools</h4>
+                <a href="https://online-qr-generator.com/en/qr?step=2&qr_onboarding=active_dpf&order=website-vcard&fx=digital-business-card">QR / Digital Business Card Tool</a>
+                <a href="https://www.design.com/ai-business-card-generator">AI Business Card Generator</a>
+                <a href="directory.html">Find a Local Professional</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
   </main>
 
   <!-- Footer -->
-  <footer id="resources" class="footer">
+  <footer class="footer">
     <div class="footer-top">
       <h2>Powered by Qualitech</h2>
       <p>Supporting the LeTip Round Table chapter with tools and technology.</p>
 
       <div class="footer-tools">
-        <a href="#" class="btn">Business Tools</a>
-        
         <a href="https://qualitechcomputers.com/" class="btn">IT Support</a>
       </div>
     </div>
@@ -126,9 +230,11 @@
         <a href="#directory">Members</a> |
         <a href="#resources">Resources</a>
       </p>
+
       <p>LeTip Round Table • Staten Island Chapter</p>
     </div>
   </footer>
- <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

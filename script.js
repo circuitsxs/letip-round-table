@@ -6,11 +6,11 @@ const logos = [
   { src: "images/logos/design-build.png", alt: "Design Build SI", url: "https://db-si.com" },
   { src: "images/logos/deville-auto.png", alt: "DeVille Auto", url: "https://www.devilleauto.com" },
   { src: "images/logos/edward-jones.png", alt: "Edward Jones", url: "https://www.edwardjones.com/cinzia-laurenza" },
-  { src: "images/logos/fjc-financial.png", alt: "FIC Financial Group", url: "https://ficfinancial.com" },
+  { src: "images/logos/fjc-financial.png", alt: "FJC Financial Group", url: "https://ficfinancial.com" },
   { src: "images/logos/gallucci-lawfirm.png", alt: "Gallucci Law Firm", url: "https://galluccilawfirm.com" },
   { src: "images/logos/gerald-peters.png", alt: "Gerald Peters Jewelers", url: "https://www.geraldpeters.com" },
   { src: "images/logos/manhattan-electrical.png", alt: "Manhattan Electrical", url: "https://network.procore.com/p/manhattan-electric-supply-staten-island" },
-  { src: "images/logos/matt-woitkowsi.png", alt: "Woitkowski Law", url: "https://woitkowski.law" }, // typo filename still applies
+  { src: "images/logos/matt-woitkowsi.png", alt: "Woitkowski Law", url: "https://woitkowski.law" },
   { src: "images/logos/northfield-bank.png", alt: "Northfield Bank", url: "https://www.enorthfield.com" },
   { src: "images/logos/precious-properties.png", alt: "Precious Properties", url: "https://www.preciousproperties.com" },
   { src: "images/logos/qualitech-computers.png", alt: "Qualitech Computers", url: "https://www.qualitechcomputers.com" },
@@ -37,9 +37,30 @@ items.forEach((item, index) => {
 
   if (logo) {
     item.innerHTML = `
-      <a href="${logo.url || '#'}" target="_blank">
+      <a href="${logo.url}">
         <img src="${logo.src}" alt="${logo.alt}">
       </a>
     `;
   }
+});
+
+
+const resourceTabs = document.querySelectorAll(".resource-tab");
+const resourcePanels = document.querySelectorAll(".resource-panel");
+
+resourceTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetId = tab.dataset.resource;
+
+    resourceTabs.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    resourcePanels.forEach((panel) => {
+      panel.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+    document.getElementById(targetId).classList.add("active");
+  });
 });

@@ -1,6 +1,6 @@
-// ==============================
+
 // LOGO DATA (each object = one business)
-// ==============================
+
 const logos = [
   { src: "images/logos/12-volt.png", alt: "12 Volt Solutions", url: "https://www.12voltfleetsolutions.com" },
   { src: "images/logos/barillari-lawfirm.png", alt: "Barillari Law Firm", url: "https://www.injurylawyerstatenisland.com" },
@@ -22,9 +22,9 @@ const logos = [
 ];
 
 
-// ==============================
+
 // SHUFFLE FUNCTION (randomizes logo order)
-// ==============================
+
 function shuffle(array) {
   const copy = [...array]; // create a copy so original list is not changed
 
@@ -42,22 +42,22 @@ function shuffle(array) {
 }
 
 
-// ==============================
+
 // SELECT RANDOM LOGOS
-// ==============================
+
 const selected = shuffle(logos).slice(0, 6);
 // shuffle logos, then take first 6
 
 
-// ==============================
+
 // FIND LOGO GRID CONTAINERS IN HTML
-// ==============================
+
 const items = document.querySelectorAll("#logoGrid .logo-item");
 
 
-// ==============================
+
 // INSERT LOGOS INTO GRID
-// ==============================
+
 items.forEach((item, index) => {
 
   const logo = selected[index]; // match logo to each box
@@ -72,9 +72,9 @@ items.forEach((item, index) => {
 });
 
 
-// ==============================
+
 // RESOURCE TAB SYSTEM
-// ==============================
+
 
 // grab all tab buttons
 const resourceTabs = document.querySelectorAll(".resource-tab");
@@ -83,9 +83,9 @@ const resourceTabs = document.querySelectorAll(".resource-tab");
 const resourcePanels = document.querySelectorAll(".resource-panel");
 
 
-// ==============================
+
 // ADD CLICK FUNCTION TO EACH TAB
-// ==============================
+
 resourceTabs.forEach((tab) => {
 
   tab.addEventListener("click", () => {

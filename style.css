@@ -437,6 +437,7 @@ section:not(.hero) {
   max-width: 1100px;
   margin: 10px auto 40px;
   padding: 20px;
+  align-items: start;
 }
 
 .directory-page {
@@ -454,15 +455,6 @@ section:not(.hero) {
   align-items: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-/* FORM UPDATE 2026-05-08: Reduced QR size inside flip cards for desktop fit */
-.flip-back .qr-code {
-  width: 105px;
-  height: 105px;
-  object-fit: contain;
-  padding: 0;
-  margin: 6px 0 8px;
 }
 
 .member-card:hover {
@@ -502,13 +494,14 @@ section:not(.hero) {
 /* FLIP CARD */
 .flip-card {
   perspective: 1000px;
+  min-height: 300px;
+  padding: 0;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 260px;
+  height: 300px;
   transition: transform 0.6s ease;
   transform-style: preserve-3d;
 }
@@ -534,10 +527,16 @@ section:not(.hero) {
 
 .flip-back {
   transform: rotateY(180deg);
-  padding-top: 24px;
 }
 
-/* FORM UPDATE 2026-05-08: Tightened flip-card buttons so back tile content fits on desktop */
+.flip-back .qr-code {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+  padding: 0;
+  margin: 6px 0 8px;
+}
+
 .flip-back .btn {
   padding: 6px 10px;
   margin: 2px;

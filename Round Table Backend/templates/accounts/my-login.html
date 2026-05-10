@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PAGE SETTINGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LeTip Portal</title>
+
+    <!-- SHARED PORTAL STYLESHEET -->
+    <link rel="stylesheet" href="{% static 'css/portal.css' %}">
+</head>
+
+<body class="form-page">
+
+    <!-- LOGIN FORM CONTAINER -->
+    <div class="form-box">
+
+        <h1>Member Login</h1>
+
+        <!-- DJANGO LOGIN FORM -->
+        <form method="POST">
+
+            <!-- SECURITY TOKEN REQUIRED BY DJANGO -->
+            {% csrf_token %}
+
+            <!-- DISPLAYS CUSTOM LOGIN FORM FROM forms.py -->
+            {{ loginForm.as_p }}
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <!-- LINK TO REGISTER PAGE -->
+        <p class="form-link">
+            Need an account?
+            <a href="{% url 'register' %}">Register here</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

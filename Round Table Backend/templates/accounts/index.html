@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PAGE SETTINGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeTip Round Table | Member Portal</title>
+
+    <!-- SHARED PORTAL STYLESHEET -->
+    <link rel="stylesheet" href="{% static 'css/portal.css' %}">
+</head>
+
+<body>
+
+    <!-- HEADER / BRANDING -->
+    <nav class="navbar">
+        <h1>LeTip Round Table</h1>
+    </nav>
+
+    <!-- PORTAL INTRO SECTION -->
+    <section class="hero">
+        <h2>Member Portal</h2>
+
+        <p>
+            Secure member access for the Staten Island LeTip Round Table chapter.
+            This backend system is being developed using Django authentication,
+            database integration, and protected member routing.
+        </p>
+
+        <!-- MAIN ACTION BUTTONS -->
+        <div class="hero-actions">
+            <a href="{% url 'register' %}" class="btn">Register</a>
+            <a href="{% url 'login' %}" class="btn">Login</a>
+        </div>
+    </section>
+
+    <!-- FEATURE PREVIEW CARDS -->
+    <section class="features">
+
+        <div class="feature-box">
+            <h3>Member Access</h3>
+            <p>
+                Registered users can securely log into the portal
+                using Django’s authentication system.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Future Dashboard</h3>
+            <p>
+                The dashboard can eventually support referrals,
+                announcements, resources, and chapter communication.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Database Driven</h3>
+            <p>
+                This system uses Django migrations and database-backed users
+                instead of static HTML-only authentication.
+            </p>
+        </div>
+
+    </section>
+
+</body>
+</html>

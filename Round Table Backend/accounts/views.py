@@ -1,5 +1,5 @@
 # accounts/views.py
-
+from .models import Announcement
 
 # IMPORT render
 # Used to load and display HTML templates
@@ -133,10 +133,27 @@ def my_login(request):
 # Protected member area
 # URL:
 # /dashboard/
+
+# MEMBER DASHBOARD VIEW
+# LOADS ANNOUNCEMENTS FROM DATABASE
+# AND SENDS THEM TO dashboard.html
+
+
 def dashboard(request):
 
-    return render(request, 'accounts/dashboard.html')
+    # GET ALL ANNOUNCEMENTS
+    # ORDER NEWEST POSTS FIRST
+    announcements = Announcement.objects.order_by('-date_posted')[:3]
 
+    # STORE DATABASE DATA INSIDE CONTEXT DICTIONARY
+    # SO IT CAN BE ACCESSED IN HTML TEMPLATE
+    context = {
+        'announcements': announcements
+    }
+
+    # RENDER DASHBOARD PAGE
+    # AND PASS ANNOUNCEMENT DATA INTO IT
+    return render(request, 'accounts/dashboard.html', context)
 
 
 # LOGOUT VIEW

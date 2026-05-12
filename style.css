@@ -732,3 +732,12 @@ section:not(.hero) {
     grid-template-columns: 1fr;
   }
 }
+
+/* FORM UPDATE 2026-05-08: Member page banner image for submitted business artwork */
+.contact-banner {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  display: block;
+}
